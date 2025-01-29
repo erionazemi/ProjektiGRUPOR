@@ -1,3 +1,8 @@
 body {
     background-image: url(img/airplane.jpg);
 }
+
+.header{
+    background-color: orange;
+    
+}
