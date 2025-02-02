@@ -7,13 +7,156 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <p>WizzAIR AirLines</p>
-    </header>
+   <header>
     <div id="container">
         <h1>Welcome to our airlines</h1>
-        <p>Book your flight & find your next adventure with us</p>
+        <p>Find the best flight deals and book your next adventure with us</p>
     </div>
+    <header>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Air Travel</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    
+                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#deals">Deals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#checkin">Check-in</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#status">Flight Status</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="book" class="container">
+        <h2 class="section-header">Book Your Flight</h2>
+        <form id="bookingForm" action="#" method="POST">
+            <div class="container">
+                <label for="from">From</label>
+                <input type="text" class="form-control" id="from" name="from" placeholder="Enter departure city" required pattern="^[a-zA-Z\s]+$" title="City name should contain only letters and spaces">
+            </div>
+            <div class="container">
+                <label for="to">To</label>
+                <input type="text" class="form-control" id="to" name="to" placeholder="Enter destination city" required pattern="^[a-zA-Z\s]+$" title="City name should contain only letters and spaces">
+            </div>
+            <div class="container">
+                <label for="departureDate">Departure Date</label>
+                <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+            </div>
+            <div class="container">
+                <label for="returnDate">Return Date</label>
+                <input type="date" class="form-control" id="returnDate" name="returnDate">
+            </div>
+            <div class="container">
+                <label for="passengers">Passengers</label>
+                <select class="form-control" id="passengers" name="passengers" required>
+                    <option value="1">1 Passenger</option>
+                    <option value="2">2 Passengers</option>
+                    <option value="3">3 Passengers</option>
+                    <option value="4">4 Passengers</option>
+                    <option value="5">5 Passengers</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Search Flights</button>
+        </form>
+    </section>
+
+  
+    <section id="destinations" class="container">
+        <h2 class="section-header">Top Destinations</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card" src="paris.jpg"alt="Paris">;
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="card-text">The city of lights awaits your visit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="tokyo.jpg" alt="Tokyo" >
+                    <div class="card-body">
+                        <h5 class="card-title">Tokyo</h5>
+                        <p class="card-text">Explore the blend of tradition and technology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="newyork.jpg" alt="New York" >
+                    <div class="card-body">
+                        <h5 class="card-title">New York</h5>
+                        <p class="card-text">Famous for its skyscrapers and vibrant city life.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="london.jpp.jpg" alt="London">
+                    <div class="card-body">
+                        <h5 class="card-title">London</h5>
+                        <p class="card-text">A hub for history, culture, and modern attractions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="deals" class="container">
+        <h2 class="section-header">Special Deals</h2>
+        <ul class="list-group">
+            
+
+            <li class="list-group-item">Spring Sale: 20% off on flights to Europe!</li>
+            
+            
+            <li class="list-group-item">Summer Escape: Get 15% off flights to tropical destinations.</li>
+            <li class="list-group-item">Weekend Getaway: Book now and save 25% on last-minute tickets!</li>
+        </ul>
+    </section>
+
+    <section id="checkin" class="container">
+        <h2 class="section-header">Check-in for Your Flight</h2>
+        <form id="checkInForm">
+            <div class="form-group">
+                <label for="bookingReference">Booking Reference</label>
+                <input type="text" class="form-control" id="bookingReference" name="bookingReference" placeholder="Enter booking reference" required pattern="^[A-Za-z0-9]{6,10}$" title="Booking reference should be alphanumeric and 6-10 characters long">
+            </div>
+            <div class="form-group">
+                <label for="Name"> Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter your  name" required pattern="^[a-zA-Z]+$" title="Last name should only contain letters">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Check-in</button>
+        </form>
+    </section>
+
+ 
+    <section id="status" class="container">
+        <h2 class="section-header">Flight Status</h2>
+        <form id="flightStatusForm">
+            <div class="form-group">
+                <label for="flightNumber">Flight Number</label>
+                <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Enter your flight number" required pattern="^[A-Za-z]{2}\d{3,4}$" title="Flight number should start with 2 letters followed by 3 to 4 digits (e.g. AA1234)">
+            </div>
+            <button type="submit" class="btn btn-warning btn-block">Check Status</button>
+        </form>
+    </section>
+
+  
+    <footer>
+        <p>&copy; 2025 Air Travel Booking | All rights reserved.</p>
+    </footer>
+
+
 </body>
 <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
 </html>
