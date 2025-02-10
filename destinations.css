@@ -1,9 +1,12 @@
 body {
-    background-image: url(img/airplane.jpg);
+    background-image: url(img/background.jpg);
+}
+section h2{
+    color: white;
 }
 
 footer {
-    background-color: rgb(58, 54, 54);
+   
     text-align: center;
     position: fixed;
     justify-content: center;
