@@ -30,19 +30,22 @@
 
         <section id="status" class="container">
             <h1 class="section-header">Flight Status</h1>
-            <form id="flightStatusForm">
+            <form id="flightStatusForm" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="flightNumber">Flight Number</label>
                     <input type="text" class="form-control" id="flightNumber" name="flightNumber" placeholder="Enter your flight number" required pattern="^[A-Za-z]{2}\d{3,4}$" title="Flight number should start with 2 letters followed by 3 to 4 digits (e.g. AA1234)">
+                    <div class="error" id="error-message">Please enter a valid flight number (e.g. AA1234).</div>
                 </div>
                 <br><br>
-                <button type="submit" class="btn btn-warning btn-block">Check Status</button>
+                <button type="submit" class="btn-warning btn-block">Check Status</button>
             </form>
         </section>
-
 
      <footer>
          <p>&copy; 2025 Air Travel Booking | All rights reserved.</p>
      </footer>  
 </body>
+
+<script src="main.js"></script>
+
 </html>

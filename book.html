@@ -29,26 +29,27 @@
     </nav>
 
 
+    <div class="form-container">
         <section id="book" class="container">
             <h2 class="section-header">Book Your Flight</h2>
-            <form id="bookingForm" action="#" method="POST">
-                <div class="container">
+            <form id="bookingForm" action="#" method="POST" onsubmit="return validateForm()">
+                <div class="form-group">
                     <label for="from">From</label>
                     <input type="text" class="form-control" id="from" name="from" placeholder="Enter departure city" required pattern="^[a-zA-Z\s]+$" title="City name should contain only letters and spaces">
                 </div>
-                <div class="container">
+                <div class="form-group">
                     <label for="to">To</label>
                     <input type="text" class="form-control" id="to" name="to" placeholder="Enter destination city" required pattern="^[a-zA-Z\s]+$" title="City name should contain only letters and spaces">
                 </div>
-                <div class="container">
+                <div class="form-group">
                     <label for="departureDate">Departure Date</label>
                     <input type="date" class="form-control" id="departureDate" name="departureDate" required>
                 </div>
-                <div class="container">
+                <div class="form-group">
                     <label for="returnDate">Return Date</label>
                     <input type="date" class="form-control" id="returnDate" name="returnDate">
                 </div>
-                <div class="container">
+                <div class="form-group">
                     <label for="passengers">Passengers</label>
                     <select class="form-control" id="passengers" name="passengers" required>
                         <option value="1">1 Passenger</option>
@@ -58,11 +59,10 @@
                         <option value="5">5 Passengers</option>
                     </select>
                 </div>
-                <br>
-                <br>
-                <button type="submit" class="btn btn-success btn-block">Search Flights</button>
+                <button type="submit" class="btn">Search Flights</button>
             </form>
         </section>
+    </div>
 
      <footer>
          <p>&copy; 2025 Air Travel Booking | All rights reserved.</p>

@@ -1,10 +1,69 @@
 body {
     background-image: url(img/airplane.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
 }
 
-body section {
-    align-items: center;
-    padding-top: 150px;
+
+#status {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+.section-header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+}
+
+.btn-warning {
+    background-color: #ff5733;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-warning:hover {
+    background-color: #e14d2b;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
 }
 
 footer{
